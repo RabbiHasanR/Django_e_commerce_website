@@ -65,8 +65,10 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" class="card-img-top"
-                  alt="">
+{#               <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" class="card-img-top"#}
+{#                  alt="">#}
+                   <img src="{{ item.image.url }}" class="card-img-top">
+
                 <a href="{{ item.get_absolute_url }}">
                   <div class="mask rgba-white-slight"></div>
                 </a>
@@ -76,7 +78,7 @@
               <!--Card content-->
               <div class="card-body text-center">
                 <!--Category & Title-->
-                <a href="" class="grey-text">
+                <a href="{{ item.get_absolute_url }}" class="grey-text">
                   <h5>{{ item.get_category_display }}</h5>
                 </a>
                 <h5>
