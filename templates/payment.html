@@ -116,10 +116,10 @@ label {
       <h2 class="my-5 h2 text-center">Checkout form</h2>
 
       <!--Grid row-->
-      <div class="row">
+      <div class="row ">
 
         <!--Grid column-->
-        <div class="col-md-12 mb-4">
+        <div class="col-md-12 mb-4 ">
 
           <!--Card-->
           <div class="card">
@@ -127,7 +127,14 @@ label {
 
   <form action="." method="post" id="stripe-form">
       {% csrf_token %}
+      {% comment %}<div class="row">
+          <div class="custom-control custom-checkbox">
+                <input  type="checkbox" class="custom-control-input" name="use_default_card" id="use_default_card">
+                <label class="custom-control-label" for="use_default_card">Use default card info:**** **** 4242</label>
+              </div>
+      </div>{% endcomment %}
     <div class="stripe-form-row">
+
       <label for="card-element" id="stripeBtnLabel">
         Credit or debit card
       </label>
@@ -138,6 +145,7 @@ label {
     </div>
 
     <button id="stripebtn">Submit Payment</button>
+
   </form>
 
 
